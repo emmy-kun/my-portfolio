@@ -26,6 +26,9 @@ function ProfileImage({ className = '' }) {
         alt="Eke Chukwuemeka"
         className="w-64 sm:w-72 md:w-80 lg:w-[28rem] h-auto object-contain rounded-3xl"
         draggable={false}
+        loading="eager"
+        decoding="async"
+        fetchPriority="high"
       />
     </div>
   )

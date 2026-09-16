@@ -17,6 +17,10 @@ export default function ProjectCard({ title, description, liveUrl, repoUrl, imag
               className="w-full h-full object-cover transition-transform duration-700 group-hover/image:scale-105"
               onError={() => setImgError(true)}
               loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+              width={1600}
+              height={1000}
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-dark-card to-dark">
