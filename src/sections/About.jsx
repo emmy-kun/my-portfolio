@@ -69,15 +69,16 @@ export default function About() {
 
               <div className="space-y-4 text-white leading-relaxed">
                 <p>
-                  I'm Eke Chukwuemeka, a passionate developer focused on creating modern,
-                  responsive, and interactive web experiences. My work sits at the intersection
-                  of <span className="text-primary font-medium">clean design</span> and{' '}
-                  <span className="text-primary font-medium">solid engineering</span>.
+                  I'm Eke Chukwuemeka, a passionate Full Stack Developer building modern,
+                  responsive, and scalable digital products. My work sits at the intersection
+                  of <span className="text-primary font-medium">great design</span> and{' '}
+                  <span className="text-primary font-medium">reliable engineering</span>.
                 </p>
                 <p>
-                  With a deep understanding of React, Tailwind CSS, and the modern JavaScript
-                  ecosystem, I build products that not only look great but feel great to use.
-                  I care about every pixel, every interaction, and every millisecond of load time.
+                  From front-end interfaces to back-end logic and APIs, I enjoy turning ideas
+                  into products that are useful, performant, and easy to use. I care about clean
+                  architecture, smooth user flow, and experiences that feel intentional from the
+                  first click to the final interaction.
                 </p>
               </div>
 
@@ -102,7 +103,7 @@ export default function About() {
               className={isInView ? 'animate-drop-shake' : ''}
               style={{ animationDelay: isInView ? '0.2s' : undefined, opacity: isInView ? undefined : 0 }}
             >
-              <StatCard end={2} suffix="+" label="Years Exp" icon={FiTrendingUp} delayClass="" />
+              <StatCard end={3} suffix="+" label="Years Exp" icon={FiTrendingUp} delayClass="" />
             </div>
             <div
               className={isInView ? 'animate-drop-shake' : ''}

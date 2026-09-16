@@ -1,4 +1,4 @@
-import { FiDownload, FiArrowUpRight } from 'react-icons/fi'
+import { FiPhone, FiArrowUpRight } from 'react-icons/fi'
 import {
   SiReact,
   SiVite,
@@ -63,7 +63,7 @@ export default function Hero() {
           </h1>
 
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-200 mb-6 animate-fade-in-up" style={{ animationDelay: '0.3s', opacity: 0 }}>
-            I build modern & interactive web experiences.
+            I build scalable products that blend solid engineering with great UX.
           </h2>
 
           {/* Mobile image — appears after tagline */}
@@ -72,9 +72,8 @@ export default function Hero() {
           </div>
 
           <p className="text-gray-400 leading-relaxed mb-8 max-w-lg animate-fade-in-up" style={{ animationDelay: '0.5s', opacity: 0 }}>
-            A passionate Frontend Developer focused on React and UI/UX design. I create
-            responsive, engaging web experiences with clean design, smooth user flow,
-            and modern technologies.
+            A passionate Full Stack Developer focused on building scalable digital products,
+            responsive interfaces, and seamless user experiences with modern technologies.
           </p>
 
           <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: '0.7s', opacity: 0 }}>
@@ -85,11 +84,10 @@ export default function Hero() {
               View My Work <FiArrowUpRight />
             </a>
             <a
-              href="/resume.pdf"
-              download
+              href="#contact"
               className="inline-flex items-center gap-2 liquid-fill border border-primary text-white font-semibold px-6 py-3 rounded-lg transition-all hover:scale-105"
             >
-              Download CV <FiDownload />
+              Contact Me <FiPhone />
             </a>
           </div>
 

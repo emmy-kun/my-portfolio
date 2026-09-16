@@ -16,7 +16,7 @@ const projects = [
   {
     title: 'Apex Horizon',
     description:
-      'Premium real-estate web experience designed to showcase luxury properties through a modern and immersive interface.',
+      'Premium real-estate web experience with Firebase authentication, a polished property browsing flow, and a modern UI designed to showcase luxury listings.',
     liveUrl: 'https://apex-horizon-co.vercel.app/',
     repoUrl: 'https://github.com/emmy-kun/Apex-Horizon',
     image: '/images/apexhorizon.png',
@@ -32,7 +32,7 @@ const projects = [
   {
     title: 'BuySmart',
     description:
-      'Modern e-commerce platform focused on product discovery, browsing, search, cart management, checkout, account features, and invoice generation.',
+      'Modern e-commerce platform with Firebase authentication, a functional backend, Paystack payment integration, cart and checkout flows, and invoice generation for a complete shopping experience.',
     liveUrl: 'https://buysmart-cart.vercel.app/',
     repoUrl: 'https://github.com/emmy-kun/buysmart',
     image: '/images/buysmart.png',

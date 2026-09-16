@@ -56,9 +56,11 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-2xl liquid-fill rounded-md p-1"
+          type="button"
+          className="md:hidden relative z-50 text-2xl rounded-md p-2 text-white transition-colors"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
+          aria-expanded={isOpen}
         >
           {isOpen ? <HiX /> : <HiMenu />}
         </button>
@@ -66,24 +68,29 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-dark-card border-t border-dark-border px-6 py-4 flex flex-col gap-4">
-          {navLinks.map((link) => (
+        <div className="md:hidden fixed inset-x-4 top-20 z-40">
+          <div className="ml-auto w-[78vw] max-w-[320px] min-h-[45vh] rounded-2xl border border-primary/30 bg-dark-card/95 backdrop-blur-xl shadow-2xl shadow-primary/10 p-5 flex flex-col">
+            <div className="mt-5 flex flex-col gap-2">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="rounded-xl px-3 py-3 text-base font-medium text-gray-200 hover:bg-primary/10 hover:text-white transition-all"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
+
             <a
-              key={link.name}
-              href={link.href}
+              href="#contact"
               onClick={() => setIsOpen(false)}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="mt-auto text-center font-semibold liquid-fill border border-primary text-white px-5 py-3 rounded-lg transition-colors"
             >
-              {link.name}
+              Hire Me
             </a>
-          ))}
-          <a
-            href="#contact"
-            onClick={() => setIsOpen(false)}
-            className="text-center font-semibold liquid-fill border border-primary text-white px-5 py-2.5 rounded-lg transition-colors"
-          >
-            Hire Me
-          </a>
+          </div>
         </div>
       )}
     </nav>
