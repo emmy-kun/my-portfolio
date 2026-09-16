@@ -10,12 +10,16 @@ export function useCountUp(end, duration = 2000) {
     const el = ref.current
     if (!el) return
 
-    // Immediate check for already-visible elements (e.g. page reload)
+    const isMobile = window.matchMedia('(max-width: 768px)').matches
+
     const rect = el.getBoundingClientRect()
     const isVisible = rect.top < window.innerHeight && rect.bottom > 0
     if (isVisible && !hasStarted.current) {
       hasStarted.current = true
       setIsInView(true)
+      if (isMobile) {
+        setCount(end)
+      }
       return
     }
 
@@ -24,6 +28,9 @@ export function useCountUp(end, duration = 2000) {
         if (entry.isIntersecting && !hasStarted.current) {
           hasStarted.current = true
           setIsInView(true)
+          if (isMobile) {
+            setCount(end)
+          }
         }
       },
       { threshold: 0.1 }
@@ -31,10 +38,14 @@ export function useCountUp(end, duration = 2000) {
 
     observer.observe(el)
     return () => observer.disconnect()
-  }, [])
+  }, [end])
 
   useEffect(() => {
     if (!isInView) return
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      setCount(end)
+      return
+    }
 
     let startTime = null
     let rafId
